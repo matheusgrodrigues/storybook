@@ -7,6 +7,7 @@
     - [Addons (Complementos)](#addons-ou-complementos)
     - [Configurar](#configurar)
 - [Como escrever histórias](#como-escrever-historias)
+- [Documentos](#documentos)
 
 ## Introducao
 
@@ -68,4 +69,13 @@ Addons (Complementos), são plugins que estendem a funcionalidade principal do S
 
 ## Como escrever historias
 
-- 
+- Storybook usa o termo genérico argumentos (args) ao se referir em React Props.
+- As histórias são definidas em um arquivo de histórias que fica ao lado do arquivo do componente. O arquivo de história é apenas para desenvolvimento e não será incluído em seu pacote de produção. 
+    - Button.js | ts | jsx | tsx
+    - Button.stories.js | ts | tsx | mdx
+- Definimos histórias de acordo com o [Component Story Format - CSF](https://storybook.js.org/docs/react/api/csf), um padrão baseado em módulo ES6 que é fácil de escrever e portátil entre ferramentas.
+- Os principais ingredientes são a exportação padrão que descreve componente e as exportações nomeadas que descrevem as histórias.
+
+## Documentos
+
+-
