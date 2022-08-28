@@ -8,6 +8,10 @@
     - [Configurar](#configurar)
 - [Como escrever histórias](#como-escrever-historias)
 - [Documentos](#documentos)
+    - [MDX](#mdx)
+- [Testes](#testes)
+- [Publicar storybook](#publicar-storybook)
+- [Integrações com design](#integracoes-com-design)
 
 ## Introducao
 
@@ -78,4 +82,33 @@ Addons (Complementos), são plugins que estendem a funcionalidade principal do S
 
 ## Documentos
 
--
+- Ao escrever histórias de componentes durante o desenvolvimento, você também cria documentação básica para revisar mais tarde.
+- O storybook oferece ferramentas para expandir a documentação básica com prosa e layout que apresentam seus componentes e histórias com destaque. Isso permite que você crie diretrizes de uso da biblioteca de interface do usuário, sites de sistema de design e muito mais.
+
+### MDX
+
+- MDX é um formato de arquivo padrão que combina Markdown com JSX.
+- Isso significa que você pode utilizar a sintaxe concisa do Mardown (como #titulo) para sua documentação, escrever histórias que compilam para o formato de história do nosso componente e incorporar blocos de componentes JSX livremente em qualquer ponto do arquivo. Tudo de uma vez.
+
+
+## Testes
+
+- O Storybook fornece um ambiente limpo para testar componentes isoladamente.
+- As histórias facilitam a exploração de um componente em todas as suas variações, não importa o quão complexo seja.
+- O Storybook tembém vem com ferramentas e um ecossistema JavaScript maior para expandir a cobertura de testes como por ex: Test runner, testes visuais, testes de acessibilidade, testes de iteração, testes instantâneos etc...
+
+## Publicar storybook
+
+- As equipes publicam o Storybook online para revisar e colaborar nos trabalhos em andamento.
+- Isso permite que desenvolvedores, designers, PMs e outras partes interessadas verifiquem se a itnerface do usuário está correta sem tocarn o código ou exigit um ambiente de desenvolvimento local.
+- O Storybook criará um aplicativo web estático capaz de ser servido por qualquer servidor web.
+- Depois de criar o Storybook estático, você pode publica-lo em seu host.
+- Recomendamos o [Chromatic](https://www.chromatic.com/) um serviço de publicação gratuito para Storybook que documenta versões, versiona e indexa seus componentes de interface de usuário com segurança na nuvem.
+- Você pode configurar o CI para publicar os componentes automaticamente.
+
+## Integracoes com design
+
+- O Storybook se integra a ferramentas de design para acelerar seu fluxo de trabalho de desenvolvimento.
+- Isso ajuda a depurar inconsistências no início do processo de design, descobrir componentes existentes para reutilização e comparar designs com histórias.
+- O Storybook possui plugins que se integram com os diversoes softwares do mercado, como figma, adobe xd, sketch entre outros...
+
