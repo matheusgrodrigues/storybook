@@ -7,6 +7,9 @@ export default {
   component: Button,
   argTypes: {
     variant: {
+      table: { defaultValue: { summary: "primary" } },
+      defaultValue: "primary",
+      description: "Estilo do botão",
       options: [
         "primary",
         "secondary",
@@ -28,13 +31,27 @@ export default {
       ],
       control: { type: "select" },
     },
-    onClick: { action: "Clicou" },
+    text: {
+      table: { defaultValue: { summary: "Clique aqui" } },
+      description: "Texto do botão",
+      control: { type: "text" },
+    },
+    active: {
+      table: { defaultValue: { summary: "True" } },
+      description: "Estado do botão",
+      control: { type: "boolean" },
+    },
+    onClick: {
+      table: { defaultValue: { summary: "Function void" } },
+      description: "Callback function",
+      action: "Clicou",
+    },
   },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => (
-  <Button {...args}>{args.children}</Button>
+  <Button {...args}>{args.text}</Button>
 );
 
 export const MButton = Template.bind({});
-MButton.args = { variant: "primary", children: "Clique aqui", active: true };
+MButton.args = { text: "Clique aqui", active: true };
