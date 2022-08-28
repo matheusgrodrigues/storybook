@@ -1,4 +1,4 @@
-# storybook
+# storybook - [Demo](https://630ba585e462553a7ef93d70-iksemgvage.chromatic.com/?path=/story/matheus-buttons-storybook--page)
 
 - [Introducao](#introducao)
 - [O que é uma história](#o-que-e-uma-historia)
@@ -12,7 +12,6 @@
 - [Testes](#testes)
 - [Publicar storybook](#publicar-storybook)
 - [Integrações com design](#integracoes-com-design)
-- [Deploy no Chromatic](https://630ba585e462553a7ef93d70-iksemgvage.chromatic.com/?path=/story/matheus-buttons-storybook--page)
 
 ## Introducao
 
