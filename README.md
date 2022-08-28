@@ -12,7 +12,7 @@
 - [Testes](#testes)
 - [Publicar storybook](#publicar-storybook)
 - [Integrações com design](#integracoes-com-design)
-- [Deploy no Chromatic](https://www.chromatic.com/component?appId=630ba585e462553a7ef93d70&csfId=bot%C3%B4es-mbutton&buildNumber=3&k=630ba713e462553a7ef9404b-1200-interactive-true&h=18&b=-5)
+- [Deploy no Chromatic](https://630ba585e462553a7ef93d70-iksemgvage.chromatic.com/?path=/story/matheus-buttons-storybook--page)
 
 ## Introducao
 
