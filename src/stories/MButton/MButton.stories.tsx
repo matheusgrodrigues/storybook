@@ -32,7 +32,7 @@ export default {
       control: { type: "select" },
     },
     text: {
-      table: { defaultValue: { summary: "Clique aqui" } },
+      table: { defaultValue: { summary: "Clique aqui!" } },
       description: "Texto do botão",
       control: { type: "text" },
     },
@@ -54,4 +54,4 @@ const Template: ComponentStory<typeof Button> = (args) => (
 );
 
 export const MButton = Template.bind({});
-MButton.args = { text: "Clique aqui", active: true };
+MButton.args = { text: "Clique aqui!", active: true };
