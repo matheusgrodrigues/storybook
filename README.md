@@ -2,13 +2,13 @@
 
 - [Introducao](#introducao)
 - [O que é uma história](#o-que-e-uma-historia)
-    - [Procurar história](#procurar-historia)
-    - [Barras de ferramentas](#barras-de-ferramentas)
-    - [Addons (Complementos)](#addons-ou-complementos)
-    - [Configurar](#configurar)
+  - [Procurar história](#procurar-historia)
+  - [Barras de ferramentas](#barras-de-ferramentas)
+  - [Addons (Complementos)](#addons-ou-complementos)
+  - [Configurar](#configurar)
 - [Como escrever histórias](#como-escrever-historias)
 - [Documentos](#documentos)
-    - [MDX](#mdx)
+  - [MDX](#mdx)
 - [Testes](#testes)
 - [Publicar storybook](#publicar-storybook)
 - [Integrações com design](#integracoes-com-design)
@@ -19,28 +19,29 @@
 - Torna o desenvolvimento mais rápido e fácil isolando componentes.
 - Utiliza o conceito de Atomic design
 - Ajuda a documentar, testar visualmente, de uma forma automatica os componentes.
-- Suportado por diversas tecnologias.
+- Ajuda a criar componentes de interface isolados da lógica de negócios e do contexto do seu aplicativo.
+- Suportado por diversas tecnologias como React, React Native, Vue, Angular, Sveltee, Ember.
 
 ## Instalacao
 
 > npx storybook init
 
 - O comando acima fará as seguintes alterações em seu ambiente local
-    - Instalação das dependencias necessárias
-    - Configuração dos scripts necessário para executar o storybook
-    - Configuração padrão do storybook
-    - Adição de histórias padrão para começar
-    - Configuração da telemetria para ajudar a melhorar a ferramenta.
+  - Instalação das dependencias necessárias
+  - Configuração dos scripts necessário para executar o storybook
+  - Configuração padrão do storybook
+  - Adição de histórias padrão para começar
+  - Configuração da telemetria para ajudar a melhorar a ferramenta.
 
 ## O que e uma historia
 
-- Uma história captura o estado atual do componente. 
+- Uma história captura o estado atual do componente.
 - Os desenvolvedores descrevem todos os estados "interessantes" que um componente pode suportar.
 - Uma história é uma função que descreve como renderizar o componente em questão.
 
 ### Procurar historia
 
-- Arquivos *.stories.js / tsx, define todas as histórias para um componente.
+- Arquivos \*.stories.js / tsx, define todas as histórias para um componente.
 - Cada um desses arquivos correspondem a um item na barra lateral correspondente.
 - Quando você clica em uma história, ele renderiza no Canvas um iframe de visualização isolado.
 
@@ -49,8 +50,8 @@
 - O Storybook possui atalhos que ajudam a economizar tempo para visualizar os componentes no Canvas.
 - 🔍 O zoom dimensiona visualmente o componente para que você possa verificar os detalhes.
 - 🖼 O plano de fundo altera o plano de fundo renderizado atrás de seu componente para que você possa verificar como seu componente é renderizado em diferentes contextos visuais.
-- 📱 A viewport renderiza o componente em várias dimensões e orientações. É ideal para verificar a capacidade de resposta dos componentes. 
-- A "Docs" mostra a documentação gerada automaticamente sobre os componentes (inferida apartir do código fonte). 
+- 📱 A viewport renderiza o componente em várias dimensões e orientações. É ideal para verificar a capacidade de resposta dos componentes.
+- A "Docs" mostra a documentação gerada automaticamente sobre os componentes (inferida apartir do código fonte).
 - Os "Docs" são úteis para compartilhar componentes reutilizáveis com sua equipe, por exemplo, em um design system ou biblioteca de componentes.
 - A barra de ferramentas é customizável, você pode usar configurações globais para alterar rapidamente temas e idiomas, ou adicionar complementos (Addons) feitos pela comunidade.
 
@@ -63,20 +64,29 @@ Addons (Complementos), são plugins que estendem a funcionalidade principal do S
 
 ### Configurar
 
+- Precisaremos seguir algumas etapas para configurar o processo de compilação em nosso ambiente.
+- Para começar, vamos usar o `degit` para configurar nosso sistema de compilação. Usando esta pacote, você pode baixar "modelos (aplicativos parcialmente construidos com alguma configuração padrão) para ajudá-lo a acelerar seu fluxo de trabalho de desenvolvimento.
+  - > npx degit chromaui/nome-modelo react-template nome-projeto
+  - > cd taskbox
+  - > yarn
+  - > yarn test --watchAll = Roda os tests (jest) no terminal
+  - > yarn storybook = Roda a aplicação storybook no navegador
+  - > yarn start = Roda o app react provider
 - O Storybook não é opinativo sobre como você gera ou carrega CSS.
 - Você pode ter que configurar suas ferramentas CSS para o ambiente de renderização do Storybook. Aqui estão algumas dicas sobre o que pode ajudar:
-    - Css-in-JS como styled-components e Emotion
-    - @import CSS em components
-    - Estilos importados globais
-    - Css externo ou webfonts no <head>
-    - Carregar fontes ou imagens de um diretório local
+  - Css-in-JS como styled-components e Emotion
+  - @import CSS em components
+  - Estilos importados globais
+  - Css externo ou webfonts no <head>
+  - Carregar fontes ou imagens de um diretório local
+- Nossas três modalidades de aplicativos front-end: teste automatizado (Jest), desenvolvimento de componentes (Storybook) e o próprio aplicativo.
 
 ## Como escrever historias
 
 - Storybook usa o termo genérico argumentos (args) ao se referir em React Props.
-- As histórias são definidas em um arquivo de histórias que fica ao lado do arquivo do componente. O arquivo de história é apenas para desenvolvimento e não será incluído em seu pacote de produção. 
-    - Button.js | ts | jsx | tsx
-    - Button.stories.js | ts | tsx | mdx
+- As histórias são definidas em um arquivo de histórias que fica ao lado do arquivo do componente. O arquivo de história é apenas para desenvolvimento e não será incluído em seu pacote de produção.
+  - Button.js | ts | jsx | tsx
+  - Button.stories.js | ts | tsx | mdx
 - Definimos histórias de acordo com o [Component Story Format - CSF](https://storybook.js.org/docs/react/api/csf), um padrão baseado em módulo ES6 que é fácil de escrever e portátil entre ferramentas.
 - Os principais ingredientes são a exportação padrão que descreve componente e as exportações nomeadas que descrevem as histórias.
 
@@ -89,7 +99,6 @@ Addons (Complementos), são plugins que estendem a funcionalidade principal do S
 
 - MDX é um formato de arquivo padrão que combina Markdown com JSX.
 - Isso significa que você pode utilizar a sintaxe concisa do Mardown (como #titulo) para sua documentação, escrever histórias que compilam para o formato de história do nosso componente e incorporar blocos de componentes JSX livremente em qualquer ponto do arquivo. Tudo de uma vez.
-
 
 ## Testes
 
@@ -111,4 +120,3 @@ Addons (Complementos), são plugins que estendem a funcionalidade principal do S
 - O Storybook se integra a ferramentas de design para acelerar seu fluxo de trabalho de desenvolvimento.
 - Isso ajuda a depurar inconsistências no início do processo de design, descobrir componentes existentes para reutilização e comparar designs com histórias.
 - O Storybook possui plugins que se integram com os diversoes softwares do mercado, como figma, adobe xd, sketch entre outros...
-
